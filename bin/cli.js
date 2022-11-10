@@ -1,23 +1,26 @@
 #!/usr/bin/env node
+const chalk = require('chalk')
+
+const { generatesFiles, generateUsage } = require('../v1-alpha/index.js')
 
 const argv = require('yargs')
-  .usage('Usage: $0 <command> [options]')
-  .example('$0 -f foo.json --a 16 --files 6', 'generate bigcommerce products to json')
+  .usage(generateUsage())
+  .example(chalk.red('$0 -f foo.json --a 16 --files 6'))
   .alias('f', 'file')
   .nargs('f', 1)
-  .describe('f', 'File to save too')
+  .describe('f', chalk.green('File to save too'))
   .demandOption(['f'])
   .options({
-    'amount': {
+    amount: {
       alias: 'a',
-      describe: 'Amount of products to write to json file',
+      describe: chalk.yellow('Amount of products to write to json file'),
       type: 'number',
       nargs: 1,
       default: 10
     },
-    'files': {
+    files: {
       alias: 'files',
-      describe: 'Amount of product files to make in json',
+      describe: chalk.yellow('Amount of product files to make in json'),
       type: 'number',
       nargs: 1,
       default: 1
@@ -26,5 +29,4 @@ const argv = require('yargs')
   .help('h')
   .alias('h', 'help').argv
 
-const { generatesFiles } = require('../v1-alpha/index.js');
 generatesFiles(argv.f, argv.amount, argv.files)
