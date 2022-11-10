@@ -6,20 +6,22 @@
 
 [![GitHub Actions](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fatrox%2Fsync-dotenv%2Fbadge)](https://actions-badge.atrox.dev/daniel-philip-johnson/generate-dummy-bigcommerce-products-sdk/goto)
 
-
 ## Description
+
 This tool gives an interactive command line tool, that allows you to generate fake Bigcommerce products and writes them to json files.
 
 ## Installation
 
 Stable version:
+
 ```bash
-~$npm install -g .
+$ npm install -g bigcommerce-command-line-product-generator
 ```
 
 ## Usage
 
 ### Tool output
+
 ```bash
 Usage: generate-products <command> [options]
 
@@ -32,7 +34,7 @@ Options:
 
 Examples:
   generate-products -f foo.json --amount 16 --files 6     generate bigcommerce products to json
-                                   
+
 ```
 
 ### Simple Example
