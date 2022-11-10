@@ -41,15 +41,17 @@
   },
   "homepage": "https://github.com/danielphilipjohnson/bigcommerce-command-line-product-generator#readme",
   "devDependencies": {
-    "eslint": "^8.7.0",
     "@typescript-eslint/eslint-plugin": "^5.42.1",
+    "eslint": "^8.7.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.2",
     "lint-staged": "^12.3.7"
   },
   "dependencies": {
-    "@daniel-philip-johnson/generate-dummy-bigcommerce-products-sdk": "^0.2.3",
+    "@daniel-philip-johnson/generate-dummy-bigcommerce-products-sdk": "^0.2.5",
+    "boxen": "^5.1.2",
+    "chalk": "^4.1.2",
     "yargs": "^17.6.2"
   }
 }
