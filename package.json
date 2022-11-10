@@ -1,18 +1,20 @@
 {
   "name": "bigcommerce-command-line-product-generator",
   "version": "0.1.0",
-  "description": "",
+  "description": "A tool to generate bigcommerce products and write to json files.",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
   "files": [
     "/bin/cli.js",
+    "/v1-alpha",
     "README.md",
     "LICENSE",
     "package-lock.json"
   ],
   "bin": {
+    "@daniel-philip-johnson/create-project": "bin/cli.js",
     "generate-products": "./bin/cli.js"
   },
   "lint-staged": {
@@ -34,6 +36,10 @@
     "type": "git",
     "url": "git+https://github.com/danielphilipjohnson/bigcommerce-command-line-product-generator.git"
   },
+  "keywords": [
+    "cli",
+    "generate-bigcommerce-products"
+  ],
   "author": "Daniel Philip Johnson",
   "license": "ISC",
   "bugs": {
