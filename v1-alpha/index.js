@@ -27,3 +27,4 @@ var __exportStar =
   }
 Object.defineProperty(exports, '__esModule', { value: true })
 __exportStar(require('./generatesFiles'), exports)
+__exportStar(require('./utils/generateUsage'), exports)
