@@ -1,0 +1,35 @@
+{
+  "name": "bigcommerce-command-line-product-generator",
+  "version": "0.0.1",
+  "description": "",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "files": [
+    "/bin/cli.js",
+    "README.md",
+    "LICENSE",
+    "package-lock.json"
+  ],
+  "bin": {
+    "generate-products": "./bin/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json && tsc -p tsconfig.cjs.json",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielphilipjohnson/bigcommerce-command-line-product-generator.git"
+  },
+  "author": "Daniel Philip Johnson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danielphilipjohnson/bigcommerce-command-line-product-generator/issues"
+  },
+  "homepage": "https://github.com/danielphilipjohnson/bigcommerce-command-line-product-generator#readme",
+  "dependencies": {
+    "@daniel-philip-johnson/generate-dummy-bigcommerce-products-sdk": "^0.2.3"
+  }
+}
