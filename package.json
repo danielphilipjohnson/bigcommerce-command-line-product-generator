@@ -15,9 +15,20 @@
   "bin": {
     "generate-products": "./bin/cli.js"
   },
+  "lint-staged": {
+    "*": [
+      "prettier --write --ignore-unknown"
+    ],
+    "**/*.ts": [
+      "eslint --ext .ts"
+    ]
+  },
   "scripts": {
     "build": "tsc -p tsconfig.json && tsc -p tsconfig.cjs.json",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "lint": "eslint --ext .ts --fix",
+    "format": "prettier --write ./src/**/*.ts",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -29,7 +40,16 @@
     "url": "https://github.com/danielphilipjohnson/bigcommerce-command-line-product-generator/issues"
   },
   "homepage": "https://github.com/danielphilipjohnson/bigcommerce-command-line-product-generator#readme",
+  "devDependencies": {
+    "eslint": "^8.7.0",
+    "@typescript-eslint/eslint-plugin": "^5.42.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.2",
+    "lint-staged": "^12.3.7"
+  },
   "dependencies": {
-    "@daniel-philip-johnson/generate-dummy-bigcommerce-products-sdk": "^0.2.3"
+    "@daniel-philip-johnson/generate-dummy-bigcommerce-products-sdk": "^0.2.3",
+    "yargs": "^17.6.2"
   }
 }
