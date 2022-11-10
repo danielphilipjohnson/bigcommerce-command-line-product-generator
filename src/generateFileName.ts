@@ -12,7 +12,5 @@
 export const generateFileName = (fileName: string, tokenAppend: number) => {
   const splitPath = fileName.split('.json')[0]
 
-  console.log('test lint')
-
   return `${splitPath}_${tokenAppend}.json`
 }
